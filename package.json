@@ -1,0 +1,48 @@
+{
+  "name": "@haneoka/altair-plugin-sandbox",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MPL-2.0",
+  "description": "Altair plugin sandbox with Worker isolation and authorized editor/resource interfaces",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "check": "npm run typecheck && npm run build",
+    "prepack": "npm run build"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haneoka-gakuen/altair-plugin-sandbox.git"
+  },
+  "homepage": "https://github.com/haneoka-gakuen/altair-plugin-sandbox#readme",
+  "bugs": {
+    "url": "https://github.com/haneoka-gakuen/altair-plugin-sandbox/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "packageManager": "pnpm@11.14.0",
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
