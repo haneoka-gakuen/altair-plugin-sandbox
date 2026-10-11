@@ -21,7 +21,9 @@
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "check": "npm run typecheck && npm run build",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "format": "prettier --write . --ignore-unknown",
+    "format:check": "prettier --check . --ignore-unknown"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -43,6 +45,14 @@
   },
   "packageManager": "pnpm@11.14.0",
   "devDependencies": {
-    "typescript": "^6.0.3"
-  }
+    "typescript": "^6.0.3",
+    "prettier": "3.7.4"
+  },
+  "keywords": [
+    "altair",
+    "visual-novel",
+    "plugin",
+    "sandbox",
+    "security"
+  ]
 }
